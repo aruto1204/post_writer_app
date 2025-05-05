@@ -23,7 +23,7 @@ interface EditorProps {
 }
 
 export default function Editor({ post }: EditorProps) {
-  const ref = useRef<EditorJS>();
+  const ref = useRef<EditorJS>(null);
   const router = useRouter();
   const [isMounted, setIsMounted] = useState<boolean>(false);
   const [isSaving, setIsSaving] = useState<boolean>(false);
@@ -61,7 +61,7 @@ export default function Editor({ post }: EditorProps) {
 
     return () => {
       ref.current?.destroy();
-      ref.current = undefined;
+      ref.current = null;
     };
   }, [isMounted, initializeEditor]);
 
