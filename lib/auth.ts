@@ -22,6 +22,7 @@ export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma),
   pages: {
     signIn: "/login",
+    error: "/error",
   },
   callbacks: {
     async jwt({ token, user }) {
