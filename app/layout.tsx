@@ -17,6 +17,13 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   keywords: ["Next.js", "React", "Tailwind CSS", "Shadcn/ui"],
   authors: [{ name: "ArutoWorks", url: siteConfig.links.x }],
+  robots: {
+    index: false,
+    follow: false,
+    noimageindex: false,
+    noarchive: false,
+    nosnippet: false,
+  },
   // openGraph: {
   //   type: "website",
   //   locale: "ja",
