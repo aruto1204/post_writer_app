@@ -39,6 +39,6 @@ export async function POST(req: NextRequest) {
       return NextResponse.json(err.issues, { status: 422 });
     }
 
-    return NextResponse.json(null, { status: 500 });
+    return NextResponse.json({ error: "内部サーバーエラーが発生しました", message: err instanceof Error ? err.message : "不明なエラー" }, { status: 500 });
   }
 }
