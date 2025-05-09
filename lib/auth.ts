@@ -33,13 +33,12 @@ export const authOptions: NextAuthOptions = {
     },
 
     async session({ token, session }) {
-      if (token.id === "string") {
-        session.user.id = token.id;
-        session.user.name = token.name;
-        session.user.email = token.email;
-        session.user.image = token.picture;
+      if (token?.id) {
+        session.user.id = token.id as string;
+        session.user.name = token.name as string;
+        session.user.email = token.email as string;
+        session.user.image = token.picture as string;
       }
-
       return session;
     },
   },
