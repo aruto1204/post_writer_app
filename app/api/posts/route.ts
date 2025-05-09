@@ -38,6 +38,7 @@ export async function POST(req: NextRequest) {
     if (err instanceof z.ZodError) {
       return NextResponse.json(err.issues, { status: 422 });
     }
+    console.log(err);
 
     return NextResponse.json({ error: "内部サーバーエラーが発生しました", message: err instanceof Error ? err.message : "不明なエラー" }, { status: 500 });
   }
