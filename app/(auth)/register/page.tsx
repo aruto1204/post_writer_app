@@ -13,7 +13,7 @@ export default function Register() {
       <div className="mx-auto w-full sm:w-[350px] flex flex-col justify-center space-y-6">
         <div className="text-center space-y-2">
           <h1 className="text-2xl font-semibold tracking-tight">アカウントの作成</h1>
-          <p className="text-sm text-muted-foreground">メールアドレスを入力してアカウントを作成してください。</p>
+          {/* <p className="text-sm text-muted-foreground">メールアドレスを入力してアカウントを作成してください。</p> */}
         </div>
 
         <UserAuthForm />
